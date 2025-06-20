@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samaritan - Home</title>
+  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.20.15/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    function HomePage() {
+      return (
+        <div className="min-h-screen bg-gray-100 font-sans">
+          {/* Header */}
+          <header className="bg-white shadow-sm">
+            <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+              <div className="flex items-center space-x-2">
+                <img
+                  src="splash.png"
+                  alt="Samaritan Logo"
+                  className="w-10 h-10 rounded-lg object-contain"
+                />
+                <div className="text-2xl font-semibold text-gray-900">Samaritan</div>
+              </div>
+              <div className="space-x-4">
+                <a href="#" className="text-gray-600 hover:text-blue-600">Home</a>
+                <a href="#" className="text-gray-600 hover:text-blue-600">Legal</a>
+                <a href="#" className="text-gray-600 hover:text-blue-600">Contact Us</a>
+              </div>
+            </nav>
+          </header>
+
+          {/* Hero Section */}
+          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+              Connect & Help with Samaritan
+            </h1>
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+              Discover tasks near you, lend a hand, or post your own. Samaritan connects communities through kindness and collaboration.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <a
+                href="#"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition"
+              >
+                Get Started
+              </a>
+              <a
+                href="#"
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg shadow-md border border-blue-600 hover:bg-blue-50 transition"
+              >
+                Learn More
+              </a>
+            </div>
+          </section>
+
+          {/* Features Section */}
+          <section className="bg-white py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl font-semibold text-gray-900 text-center mb-12">
+                Why Choose Samaritan?
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="p-6 bg-gray-50 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Find Nearby Tasks</h3>
+                  <p className="text-gray-600">
+                    Locate tasks in your area and offer your help with just a few clicks.
+                  </p>
+                </div>
+                <div className="p-6 bg-gray-50 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Post Your Needs</h3>
+                  <p className="text-gray-600">
+                    Easily create tasks and connect with locals ready to assist you.
+                  </p>
+                </div>
+                <div className="p-6 bg-gray-50 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Build Community</h3>
+                  <p className="text-gray-600">
+                    Strengthen local bonds by helping and supporting each other.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Footer */}
+          <footer className="bg-gray-900 text-white py-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <p className="text-gray-400">© 2025 Samaritan. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<HomePage />, document.getElementById('root'));
+  </script>
+</body>
+</html>
