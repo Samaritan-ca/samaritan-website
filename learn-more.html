@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn More - Samaritan</title>
+    <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.20.15/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in { animation: fadeIn 0.8s ease-out; }
+      .hover-scale { transition: transform 0.3s ease; }
+      .hover-scale:hover { transform: scale(1.05); }
+      .gradient-bg {
+        background: linear-gradient(135deg, #007aff 0%, #4dabf7 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function LearnMorePage() {
+        return (
+          <div className="min-h-screen bg-gray-50 font-sans">
+            {/* Header */}
+            <header className="bg-white shadow-lg sticky top-0 z-50">
+              <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap justify-between items-center gap-4">
+                <div className="flex items-center space-x-3 animate-fade-in">
+                  <img
+                    src="splash.png"
+                    alt="Samaritan Logo"
+                    className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-contain hover-scale"
+                  />
+                  <div className="text-3xl font-bold text-gray-900 tracking-tight">Samaritan</div>
+                </div>
+                <div className="flex space-x-4 sm:space-x-6">
+                  <a href="index.html" className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Home</a>
+                  <a href="legal.html" className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Legal</a>
+                  <a href="contact-us.html" className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Contact Us</a>
+                </div>
+              </nav>
+            </header>
+
+            {/* Content */}
+            <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12 animate-fade-in">
+              <section>
+                <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 text-center">About Samaritan</h1>
+                <p className="text-lg text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
+                  Samaritan was born out of a simple idea: to make it easier for people to help each other in their own communities. Inspired by everyday acts of kindness, our team set out to build a platform that bridges the gap between those offering help and those who need it.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  Samaritan’s mission is to empower individuals to connect through kindness, one task at a time. We aim to make it easier for people to share their time, skills, and support within their local area — safely, respectfully, and on their own terms.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">What the App Enables</h2>
+                <ul className="list-disc list-inside text-gray-700 space-y-2 text-lg">
+                  <li>Post requests for help, such as small tasks or errands</li>
+                  <li>Browse and discover local tasks nearby</li>
+                  <li>Offer support and connect with others</li>
+                  <li>Track your activity and build trust in your community</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Your Safety & Privacy</h2>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  We take your privacy seriously. Samaritan is built with respect for user boundaries, data protection, and choice. All interactions are optional and initiated by users voluntarily.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
+                <ul className="list-disc list-inside text-gray-700 space-y-2 text-lg">
+                  <li><strong>Respect:</strong> Everyone deserves dignity.</li>
+                  <li><strong>Trust:</strong> Built through transparency and consistency.</li>
+                  <li><strong>Simplicity:</strong> Helping others should be intuitive.</li>
+                  <li><strong>Local First:</strong> Strong communities begin nearby.</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Responsibility Notice</h2>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  Samaritan facilitates community connections but does not employ helpers or guarantee task outcomes. All participation is voluntary. Please use your best judgment and report any concerns.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Looking Ahead</h2>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  Samaritan continues to grow. As the community evolves, we listen, learn, and improve. While we don’t promise to change the world overnight, we believe small acts — done often — make a real impact.
+                </p>
+              </section>
+            </main>
+
+            {/* Footer */}
+            <footer className="gradient-bg text-white py-12">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p className="text-gray-200 text-lg">© 2025 Samaritan. All rights reserved.</p>
+                <div className="mt-4 space-x-6">
+                  <a href="legal.html" className="text-gray-200 hover:text-white transition-colors duration-300">Legal</a>
+                  <a href="contact-us.html" className="text-gray-200 hover:text-white transition-colors duration-300">Contact Us</a>
+                </div>
+              </div>
+            </footer>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<LearnMorePage />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
