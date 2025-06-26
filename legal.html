@@ -11,12 +11,29 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .animate-fade-in { animation: fadeIn 0.8s ease-out; }
-        .hover-scale { transition: transform 0.3s ease; }
-        .hover-scale:hover { transform: scale(1.05); }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
         .gradient-bg {
             background: linear-gradient(135deg, #007aff 0%, #4dabf7 100%);
         }
@@ -31,16 +48,16 @@
                 <div className="min-h-screen bg-gray-50 font-sans">
                     {/* Header */}
                     <header className="bg-white shadow-lg sticky top-0 z-50">
-                        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+                        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap justify-between items-center gap-4">
                             <div className="flex items-center space-x-3 animate-fade-in">
                                 <img
                                     src="splash.png"
                                     alt="Samaritan Logo"
-                                    className="w-20 h-20 rounded-full object-contain hover-scale"
+                                    className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-contain hover-scale"
                                 />
                                 <div className="text-3xl font-bold text-gray-900 tracking-tight">Samaritan</div>
                             </div>
-                            <div className="space-x-6">
+                            <div className="flex space-x-4 sm:space-x-6">
                                 <a href="index.html" className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Home</a>
                                 <a href="legal.html" className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Legal</a>
                                 <a href="contact-us.html" className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Contact Us</a>
